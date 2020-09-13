@@ -235,15 +235,15 @@ var storeLocation5 = {
 }
 
 // call functions
-storeLocation1. getPurchCookies();
+storeLocation1.getPurchCookies();
 storeLocation1.render();
-storeLocation2. getPurchCookies();
+storeLocation2.getPurchCookies();
 storeLocation2.render();
-storeLocation3. getPurchCookies();
+storeLocation3.getPurchCookies();
 storeLocation3.render();
-storeLocation4. getPurchCookies();
+storeLocation4.getPurchCookies();
 storeLocation4.render();
-storeLocation5. getPurchCookies();
+storeLocation5.getPurchCookies();
 storeLocation5.render();
 // helper function
 function getRandNum(min, max) {
