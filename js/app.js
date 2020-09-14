@@ -21,7 +21,7 @@ var storeLocation1 = {
             this.getCustomersNumber();
             var cookiesPerHour = Math.ceil(this.customersPerHour * this.avgCookiesPerCustomer);
             this.avgCookiesPerHour.push(cookiesPerHour);
-            this.totalCookies += this.avgCookiesPerHour[i];
+            this.totalCookies += cookiesPerHour;
         }
 
     },
