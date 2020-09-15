@@ -9,6 +9,7 @@ for (var i = 0; i < hours.length; i++) {
     locationsTotalPerHour[i] = 0;
 }
 
+// Constructor
 function Store(location, minCustomers, maxCustomers, avgCookiesPerCustomer) {
     this.location = location;
     this.minCustomers = minCustomers;
@@ -19,18 +20,17 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerCustomer) {
     stores.push(this);
 }
 
+// Prototypes
 Store.prototype.getPurchCookies = function () {
     for (var i = 0; i < hours.length; i++) {
         var customersPerHour = getRandNum(this.minCustomers, this.maxCustomers);
         var cookiesPerHour = Math.ceil(customersPerHour * this.avgCookiesPerCustomer);
         this.avgCookiesPerHour.push(cookiesPerHour);
         this.totalCookies += cookiesPerHour;
-        locationsTotalPerHour[i] += this.totalCookies;
+        locationsTotalPerHour[i] += cookiesPerHour;
     }
     locationsTotalPerDay += this.totalCookies;
-
 };
-
 Store.prototype.render = function (tableEl) {
     var trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
@@ -45,26 +45,9 @@ Store.prototype.render = function (tableEl) {
     var tdEl = document.createElement('td');
     trEl.appendChild(tdEl);
     tdEl.textContent = this.totalCookies;
-}
+};
 
-var seattle = new Store('Seattle', 23, 65, 6.3);
-var tokyo = new Store('Tokyo', 3, 24, 1.2);
-var dubai = new Store('Dubai', 11, 38, 3.7);
-var paris = new Store('Paris', 20, 38, 2.3);
-var lima = new Store('Lima', 2, 16, 4.6);
-
-// call functions
-createTable();
-
-// helper function
-function getRandNum(min, max) {
-    return (Math.floor(Math.random() * (max - min + 1) + 1));
-
-}
-
-
-
-
+// Table functions
 function renderHeaderRow(tableEl) {
     var trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
@@ -79,7 +62,6 @@ function renderHeaderRow(tableEl) {
     trEl.appendChild(thEl);
     thEl.textContent = 'Daily Location Total';
 }
-
 function renderFooterRow(tableEl) {
     var trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
@@ -95,8 +77,7 @@ function renderFooterRow(tableEl) {
     trEl.appendChild(tdEl);
     tdEl.textContent = totalOfTotals();
 }
-
-function createTable() {
+function salesTable() {
     var container = document.getElementById('container');
     var tableEl = document.createElement('table');
     container.appendChild(tableEl);
@@ -108,10 +89,21 @@ function createTable() {
     renderFooterRow(tableEl);
 }
 
-function totalOfTotals(){
-    var locationsTotalAllHours = 0;
-    for (var i = 0;i<locationsTotalPerHour.length;i++){
-        locationsTotalAllHours += locationsTotalPerHour[i];
-    }
-    return (locationsTotalAllHours+locationsTotalPerDay)
+// Helper functions
+function getRandNum(min, max) {
+    return (Math.floor(Math.random() * (max - min + 1) + 1));
 }
+function totalOfTotals() {
+    return (locationsTotalPerDay);
+}
+
+// Create objects
+var seattle = new Store('Seattle', 23, 65, 6.3);
+var tokyo = new Store('Tokyo', 3, 24, 1.2);
+var dubai = new Store('Dubai', 11, 38, 3.7);
+var paris = new Store('Paris', 20, 38, 2.3);
+var lima = new Store('Lima', 2, 16, 4.6);
+
+// Call functions
+salesTable();
+
