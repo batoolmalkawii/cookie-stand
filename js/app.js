@@ -27,7 +27,7 @@ Store.prototype.getPurchCookies = function () {
         var cookiesPerHour = Math.ceil(customersPerHour * this.avgCookiesPerCustomer);
         this.avgCookiesPerHour.push(cookiesPerHour);
         this.totalCookies += cookiesPerHour;
-        locationsTotalPerHour[i] += this.totalCookies;
+        locationsTotalPerHour[i] += cookiesPerHour;
     }
     locationsTotalPerDay += this.totalCookies;
 };
@@ -94,11 +94,7 @@ function getRandNum(min, max) {
     return (Math.floor(Math.random() * (max - min + 1) + 1));
 }
 function totalOfTotals() {
-    var locationsTotalAllHours = 0;
-    for (var i = 0; i < locationsTotalPerHour.length; i++) {
-        locationsTotalAllHours += locationsTotalPerHour[i];
-    }
-    return (locationsTotalAllHours + locationsTotalPerDay)
+    return (locationsTotalPerDay);
 }
 
 // Create objects
