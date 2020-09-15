@@ -9,6 +9,7 @@ for (var i = 0; i < hours.length; i++) {
     locationsTotalPerHour[i] = 0;
 }
 
+// Constructor
 function Store(location, minCustomers, maxCustomers, avgCookiesPerCustomer) {
     this.location = location;
     this.minCustomers = minCustomers;
@@ -18,6 +19,8 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerCustomer) {
     this.totalCookies = 0;
     stores.push(this);
 }
+
+// Prototypes
 Store.prototype.getPurchCookies = function () {
     for (var i = 0; i < hours.length; i++) {
         var customersPerHour = getRandNum(this.minCustomers, this.maxCustomers);
@@ -44,10 +47,7 @@ Store.prototype.render = function (tableEl) {
     tdEl.textContent = this.totalCookies;
 };
 
-// helper functions
-function getRandNum(min, max) {
-    return (Math.floor(Math.random() * (max - min + 1) + 1));
-}
+// Table functions
 function renderHeaderRow(tableEl) {
     var trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
@@ -88,6 +88,11 @@ function salesTable() {
     }
     renderFooterRow(tableEl);
 }
+
+// Helper functions
+function getRandNum(min, max) {
+    return (Math.floor(Math.random() * (max - min + 1) + 1));
+}
 function totalOfTotals() {
     var locationsTotalAllHours = 0;
     for (var i = 0; i < locationsTotalPerHour.length; i++) {
@@ -96,13 +101,13 @@ function totalOfTotals() {
     return (locationsTotalAllHours + locationsTotalPerDay)
 }
 
-// create objects
+// Create objects
 var seattle = new Store('Seattle', 23, 65, 6.3);
 var tokyo = new Store('Tokyo', 3, 24, 1.2);
 var dubai = new Store('Dubai', 11, 38, 3.7);
 var paris = new Store('Paris', 20, 38, 2.3);
 var lima = new Store('Lima', 2, 16, 4.6);
 
-// call functions
+// Call functions
 salesTable();
 

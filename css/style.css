@@ -68,6 +68,7 @@ article ul li{
     color:#8A8578;
     font-weight: bold;
 }
+
 footer {
     clear: both;
     width: 100%;
@@ -77,12 +78,15 @@ footer {
     padding: 15px;
     font-family: 'Raleway', sans-serif; 
     text-transform: uppercase;
+}
 
-  }
-
-  table,
-  th,
-  td {
+table, th, td {
     border: 1px solid black;
     text-align: center;
-  }
+}
+
+table {
+        margin-left: auto;
+        margin-right: auto;
+      }
+}
