@@ -44,17 +44,7 @@ Store.prototype.render = function (tableEl) {
     tdEl.textContent = this.totalCookies;
 };
 
-// create objects
-var seattle = new Store('Seattle', 23, 65, 6.3);
-var tokyo = new Store('Tokyo', 3, 24, 1.2);
-var dubai = new Store('Dubai', 11, 38, 3.7);
-var paris = new Store('Paris', 20, 38, 2.3);
-var lima = new Store('Lima', 2, 16, 4.6);
-
-// call functions
-salesTable();
-
-// helper function
+// helper functions
 function getRandNum(min, max) {
     return (Math.floor(Math.random() * (max - min + 1) + 1));
 }
@@ -105,3 +95,14 @@ function totalOfTotals() {
     }
     return (locationsTotalAllHours + locationsTotalPerDay)
 }
+
+// create objects
+var seattle = new Store('Seattle', 23, 65, 6.3);
+var tokyo = new Store('Tokyo', 3, 24, 1.2);
+var dubai = new Store('Dubai', 11, 38, 3.7);
+var paris = new Store('Paris', 20, 38, 2.3);
+var lima = new Store('Lima', 2, 16, 4.6);
+
+// call functions
+salesTable();
+
