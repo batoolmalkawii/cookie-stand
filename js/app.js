@@ -18,7 +18,6 @@ function Store(location, minCustomers, maxCustomers, avgCookiesPerCustomer) {
     this.totalCookies = 0;
     stores.push(this);
 }
-
 Store.prototype.getPurchCookies = function () {
     for (var i = 0; i < hours.length; i++) {
         var customersPerHour = getRandNum(this.minCustomers, this.maxCustomers);
@@ -28,9 +27,7 @@ Store.prototype.getPurchCookies = function () {
         locationsTotalPerHour[i] += this.totalCookies;
     }
     locationsTotalPerDay += this.totalCookies;
-
 };
-
 Store.prototype.render = function (tableEl) {
     var trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
@@ -45,8 +42,9 @@ Store.prototype.render = function (tableEl) {
     var tdEl = document.createElement('td');
     trEl.appendChild(tdEl);
     tdEl.textContent = this.totalCookies;
-}
+};
 
+// create objects
 var seattle = new Store('Seattle', 23, 65, 6.3);
 var tokyo = new Store('Tokyo', 3, 24, 1.2);
 var dubai = new Store('Dubai', 11, 38, 3.7);
@@ -54,17 +52,12 @@ var paris = new Store('Paris', 20, 38, 2.3);
 var lima = new Store('Lima', 2, 16, 4.6);
 
 // call functions
-createTable();
+salesTable();
 
 // helper function
 function getRandNum(min, max) {
     return (Math.floor(Math.random() * (max - min + 1) + 1));
-
 }
-
-
-
-
 function renderHeaderRow(tableEl) {
     var trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
@@ -79,7 +72,6 @@ function renderHeaderRow(tableEl) {
     trEl.appendChild(thEl);
     thEl.textContent = 'Daily Location Total';
 }
-
 function renderFooterRow(tableEl) {
     var trEl = document.createElement('tr');
     tableEl.appendChild(trEl);
@@ -95,8 +87,7 @@ function renderFooterRow(tableEl) {
     trEl.appendChild(tdEl);
     tdEl.textContent = totalOfTotals();
 }
-
-function createTable() {
+function salesTable() {
     var container = document.getElementById('container');
     var tableEl = document.createElement('table');
     container.appendChild(tableEl);
@@ -107,11 +98,10 @@ function createTable() {
     }
     renderFooterRow(tableEl);
 }
-
-function totalOfTotals(){
+function totalOfTotals() {
     var locationsTotalAllHours = 0;
-    for (var i = 0;i<locationsTotalPerHour.length;i++){
+    for (var i = 0; i < locationsTotalPerHour.length; i++) {
         locationsTotalAllHours += locationsTotalPerHour[i];
     }
-    return (locationsTotalAllHours+locationsTotalPerDay)
+    return (locationsTotalAllHours + locationsTotalPerDay)
 }
