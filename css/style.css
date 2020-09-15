@@ -89,4 +89,47 @@ table {
         margin-left: auto;
         margin-right: auto;
       }
-}
+
+#hero {
+        margin-top: 55px;
+        background-image: url('../img/family.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 700px;
+      }
+
+
+      #left-column{
+        float: left;
+        padding-left: 250px;
+        padding-right: 30px;
+        margin-top: 10px;
+    }
+    .stores {
+      overflow: auto;
+      margin-bottom: 17px;
+      width: 460px;
+      height: 320px;
+      font-style: italic;
+    }
+    .locations h1 {
+      margin-bottom: 15px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 50px;
+      margin-top: 100px;
+
+
+    }
+    .locations article p {
+      padding-bottom: 15px;
+    }
+
+    #family{
+        text-align: center; 
+        font-family: 'Amatic SC', cursive; 
+        color: #f0ae71;
+        font-weight: bold;
+        font-size: 50px;
+        
+    }
