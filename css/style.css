@@ -74,20 +74,34 @@ footer {
     width: 100%;
     text-align: center;
     background-color: #ffffff;
-    color: #f0ae71 ;
+    color: #f0ae71;
     padding: 15px;
     font-family: 'Raleway', sans-serif; 
     text-transform: uppercase;
+    position: fixed;
+    bottom: 0px;
+}
+
+footer img{
+    margin-top: 3px;
+    margin-bottom: 0px;
 }
 
 table, th, td {
-    border: 1px solid black;
+    border: 1px solid #8A8578;
     text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: #8A8578;
+}
+
+table tr td:first-child{
+    font-weight: bolder;
 }
 
 table {
         margin-left: auto;
         margin-right: auto;
+        margin-top: 10px;
       }
 
 #hero {
@@ -133,3 +147,92 @@ table {
         font-size: 50px;
         
     }
+
+    #add{
+        text-align: center;
+        margin-left: 215px;
+        margin-top: 20px;
+        background-color: #5DA38B;
+        color:  #ffffff;
+        font-family: 'Raleway', sans-serif; 
+        border: none;
+        padding: 8px 9px;
+        font-weight: 1000;
+    }
+
+    #add:hover{
+        background-color: #f0ae71;
+        transition-delay: 350ms;
+          }
+
+    #add a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    form {
+        width: 390px;
+        margin-left: 565px;
+        display: none;
+    }
+    
+    fieldset {
+        width: 100%;
+    }
+    
+    ​fieldset input[type=text] {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        display: inline-block;
+        width: 390px;
+    }​​
+    
+    fieldset p input[type=text] {
+        width: 105px;
+        margin: 0;
+    }
+    
+    fieldset p input[type=text] + input[type=text] {
+        float: right;
+        width: 241px;
+    }
+
+    #submit{
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #5DA38B;
+        color:  #ffffff;
+        font-family: 'Raleway', sans-serif; 
+        border: none;
+        padding: 8px 9px;
+        font-weight: 1000;
+        text-transform: uppercase;
+    }
+
+    #submit:hover{
+        background-color: #f0ae71;
+        transition-delay: 350ms;
+          }
+
+    #submit a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    input:invalid {
+        border: 2px solid #8A8578;
+      }
+      
+      input:valid {
+        border: 2px solid #5DA38B;
+      }
+
+      input:focus:invalid {
+        box-shadow: none;
+      }
