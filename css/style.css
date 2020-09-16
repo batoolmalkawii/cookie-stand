@@ -226,9 +226,13 @@ table {
     }
 
     input:invalid {
-        border: 2px dashed red;
+        border: 2px solid #8A8578;
       }
       
       input:valid {
-        border: 2px solid black;
+        border: 2px solid #5DA38B;
+      }
+
+      input:focus:invalid {
+        box-shadow: none;
       }

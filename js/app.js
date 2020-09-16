@@ -12,6 +12,7 @@ var container = document.getElementById('container');
 var tableEl = document.createElement('table');
 var form = document.getElementById('addForm');
 
+
 // Constructor
 function Store(location, minCustomers, maxCustomers, avgCookiesPerCustomer) {
     this.location = location;
@@ -102,16 +103,16 @@ function totalOfTotals() {
 function displayForm() {
     var x = document.getElementById("addForm");
     if (x.style.display === "block") {
-      x.style.display = "none";
+        x.style.display = "none";
     } else {
-      x.style.display = "block";
+        x.style.display = "block";
     }
-  }
+}
 
 // form event handling function
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    var location= event.target.location.value;
+    var location = event.target.location.value;
     var minCustomers = event.target.minCustomers.value;
     var maxCustomers = event.target.maxCustomers.value;
     var avgCookies = event.target.avgCookies.value;
@@ -121,7 +122,8 @@ form.addEventListener('submit', function (event) {
     store.render();
     renderFooterRow();
     form.reset();
-  });
+});
+
 // Create objects
 var seattle = new Store('Seattle', 23, 65, 6.3);
 var tokyo = new Store('Tokyo', 3, 24, 1.2);
