@@ -132,4 +132,6 @@ var paris = new Store('Paris', 20, 38, 2.3);
 var lima = new Store('Lima', 2, 16, 4.6);
 
 // Call functions
+if(window.location.pathname === '/sales.html'){
 salesTable();
+}
