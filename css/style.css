@@ -63,10 +63,8 @@ p{
 }
 
 article ul li{
-    font-family: Arial, Helvetica, sans-serif ;
-    line-height: 25px;
-    color:#8A8578;
-    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color:  #8A8578;
 }
 
 footer {
@@ -78,14 +76,15 @@ footer {
     padding: 15px;
     font-family: 'Raleway', sans-serif; 
     text-transform: uppercase;
-    position: fixed;
-    bottom: 0px;
+   position: fixed;
+   bottom: 0;
 }
 
 footer img{
     margin-top: 3px;
     margin-bottom: 0px;
 }
+
 
 table, th, td {
     border: 1px solid #8A8578;
@@ -112,32 +111,27 @@ table {
         height: 700px;
       }
 
-
-      #left-column{
+      .locations h1 {
+        margin-bottom: 0px;
+        text-align: justify;
+        font-size: 50px;
+        margin-top: 100px;
+      }
+      #leftImg{
         float: left;
         padding-left: 250px;
         padding-right: 30px;
         margin-top: 10px;
     }
-    .stores {
+    .storesList {
       overflow: auto;
       margin-bottom: 17px;
       width: 460px;
       height: 320px;
       font-style: italic;
     }
-    .locations h1 {
-      margin-bottom: 15px;
-      text-align: left;
-      font-weight: bold;
-      font-size: 50px;
-      margin-top: 100px;
 
 
-    }
-    .locations article p {
-      padding-bottom: 15px;
-    }
 
     #family{
         text-align: center; 
@@ -236,3 +230,32 @@ table {
       input:focus:invalid {
         box-shadow: none;
       }
+
+      .workingHours h1 {
+        margin-bottom: 0px;
+        text-align: justify;
+        font-size: 50px;
+        margin-top: 100px;
+      }
+      #leftImgHours{
+        float: left;
+        padding-left: 250px;
+        padding-right: 30px;
+        margin-top: 10px;
+    }
+    .hoursList {
+      overflow: auto;
+      margin-bottom: 17px;
+      width: 460px;
+      height: 320px;
+      font-style: italic;
+    }
+
+    footer p{
+        float: left;
+        text-align: right;
+        text-transform: none;
+    }
+
+    
+
