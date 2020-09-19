@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
 *{
     box-sizing:border-box;
 }
@@ -87,7 +91,7 @@ footer img{
 
 
 table, th, td {
-    border: 1px solid #8A8578;
+    border: 0.5px solid #8A8578;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     color: #8A8578;
@@ -291,4 +295,9 @@ table {
         background-color:  #f0ae71;
         color: #ffffff;
         transition-delay: 350ms;
+      }
+
+      h1{
+        font-family: 'Arvo', serif;
+
       }
